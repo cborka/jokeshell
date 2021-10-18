@@ -56,7 +56,7 @@ async function getJokeAsync() {
     }
 }
 
-function RunJokes(url = jokesUrl, j_num = jokesNumber, delay = jokesDelay) {
+function RunJokes(url = jokesUrl, j_num = jokesNumber, delay = jokesDelay, isAsyncAwait = false) {
     if (url) {
         jokesUrl = url;
     }
@@ -67,13 +67,15 @@ function RunJokes(url = jokesUrl, j_num = jokesNumber, delay = jokesDelay) {
         jokesDelay = delay;
     }
 
-
     console.log('jokesUrl='+jokesUrl);
     console.log('jokesNumber='+jokesNumber);
     console.log('jokesDelay='+jokesDelay);
 
-    getJokePromise();
-    //getJokeAsync();
+    if (isAsyncAwait) {
+        getJokeAsync();
+    } else {
+        getJokePromise();
+    }
 }
 
 //RunJokes();
