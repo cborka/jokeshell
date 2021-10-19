@@ -1,9 +1,6 @@
 # Joke Shell
 ####Jokes reader and tester
 
- 
-
-
     Usage:
     app [options] [command]
 

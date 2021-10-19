@@ -11,7 +11,7 @@ let jokesUrl = 'https://v2.jokeapi.dev/joke/Any';
  * Returns an array of requests to the joke site.
  *
  * @remarks
- * This method is called from within a function {@RunAsyncTest | Parsing test}.
+ * This method is called from within a function {@link RunAsyncTest | Parsing test}.
  *
  * @param num - Array size
  * @returns The array of promises
@@ -31,7 +31,7 @@ function getPromiseArray (num = 5) {
  * Parsing N number of jokes asynchronously (using Promise.all ()).
  *
  * @remarks
- * This method use a function {@getPromiseArray | Forming an array of requests}.
+ * This method use a function {@link getPromiseArray | Forming an array of requests}.
  *
  * @param num - Number of requests
  */

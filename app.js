@@ -1,7 +1,12 @@
 #!/usr/bin/env node
 
-
-
+/**
+ * Commander for launch and testing requests for joke resource
+ *
+ * @see README.md for details
+ *
+ * @packageDocumentation
+ */
 const commander = require('commander'),
     { prompt } = require('inquirer'),
     chalk = require('chalk'),

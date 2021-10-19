@@ -5,7 +5,9 @@
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node app.js hi You -j myJoke"
+    "start": "node app.js run -n 2 -d 1",
+    "sync-test": "node app.js test -n 2 ",
+    "async-test": "node app.js test -n 2 -a"
   },
   "author": "",
   "license": "ISC",

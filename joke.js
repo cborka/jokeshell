@@ -34,7 +34,7 @@ function ShowJoke(joke, counter = jokesCounter) {
  * Request for a joke using Promise
  *
  * @remarks
- * Use function {@ShowJoke} to show joke
+ * Use function {@link ShowJoke} to show joke
  */
 function  getJokePromise() {
 
@@ -56,7 +56,7 @@ function  getJokePromise() {
  * Request for a joke using Async - await
  *
  * @remarks
- * Use function {@ShowJoke} to show joke
+ * Use function {@link ShowJoke} to show joke
  */
 async function getJokeAsync() {
     try {
@@ -76,7 +76,7 @@ async function getJokeAsync() {
  * Tunes and runs functions for requests for a jokes
  *
  * @remarks
- * Use function {@getJokeAsync} or {@getJokePromise} for requests
+ * Use function {@link getJokeAsync} or {@link getJokePromise} for requests
  *
  * @param url - Object
  * @param j_num - Number of jokes
