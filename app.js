@@ -46,9 +46,6 @@ commander
                     message: 'Enter number: ',
                 },
             ]).then((inputs) => {
-                console.log(options);
-                console.log(inputs);
-
                 let url = undefined;
                 if (inputs.category > 0 && inputs.category <= categorys.length) {
 
