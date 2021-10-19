@@ -3,14 +3,21 @@ const now   = require("performance-now");
 const request = require('sync-request');
 const joke  = require('./joke');
 
-
 let endTime = 0;
 let beginTime = 0;
 let jokesUrl = 'https://v2.jokeapi.dev/joke/Any';
 
-// AsyncTest
-
-function getPromiseArray (num = 10) {
+/**
+ * Returns an array of requests to the joke site.
+ *
+ * @remarks
+ * This method is called from within a function {@RunAsyncTest | Parsing test}.
+ *
+ * @param num - Array size
+ * @returns The array of promises
+ *
+ */
+function getPromiseArray (num = 5) {
     let promiseArray = [];
 
     for(let i=0; i<num; i++ ) {
@@ -20,7 +27,15 @@ function getPromiseArray (num = 10) {
     return promiseArray;
 }
 
-function RunAsyncTest(num = 10) {
+/**
+ * Parsing N number of jokes asynchronously (using Promise.all ()).
+ *
+ * @remarks
+ * This method use a function {@getPromiseArray | Forming an array of requests}.
+ *
+ * @param num - Number of requests
+ */
+function RunAsyncTest(num = 5) {
 
     beginTime = now();
 
@@ -34,7 +49,11 @@ function RunAsyncTest(num = 10) {
     });
 }
 
-
+/**
+ * Parsing N number of jokes synchronously (using sync-request library).
+ *
+ * @param num - Number of requests
+ */
 function RunSyncTest(num = 5) {
     beginTime = now();
 
@@ -51,6 +70,3 @@ function RunSyncTest(num = 5) {
 
 let test = {RunAsyncTest, RunSyncTest};
 module.exports = test;
-
-//RunAsyncTest(5);
-//RunSyncTest(5);

@@ -27,7 +27,7 @@
       -n, --num <jokesnum>  Number of jokes
       -d, --delay <delay>   Delay between messages (seconds)
       -a, --asyncawait      Promise or AsyncAwait (default: promise)
-      -p, --prompt          Prompt options
+      -p, --prompt          Prompt for category
       -h, --help            display help for command
 
 #####2. Tests the speed of access to a resource in synchronous and asynchronous versions.
