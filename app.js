@@ -26,7 +26,6 @@ commander
     .description('Run jokes logging')
     .action((options) => {
 
-        console.log(options);
         if (!options.prompt) {
             joke.RunJokes(null, options.num, options.delay, options.asyncawait)
         } else {
